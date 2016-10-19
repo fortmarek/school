@@ -42,7 +42,7 @@ public class project1 {
     }
 
     private static void printArithmetic(List<Integer> integersList) {
-        int total_sum = 0;
+        double total_sum = 0;
         for (int i : integersList) {
             total_sum += i;
         }
