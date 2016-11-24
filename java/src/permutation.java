@@ -2,15 +2,12 @@
  * Created by marekfort on 23/11/2016.
  */
 
-import java.sql.Array;
 import java.util.*;
-import java.util.stream.IntStream;
-
 import static java.lang.System.out;
 
 public class permutation {
 
-    public static int n = 0;
+    private static int n = 0;
 
     public static void main(String[] args) {
         out.println("Chci aby číslo n pro permutace bylo: ");
