@@ -51,10 +51,11 @@
       <file leaf-file-name="permutation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/permutation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="35" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,10 +64,12 @@
       <file leaf-file-name="nestedArray.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/nestedArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="735">
+              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#384#392#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -720,12 +723,12 @@
       <updated>1476882980482</updated>
       <workItem from="1476882982352" duration="4233000" />
       <workItem from="1478095968674" duration="4522000" />
-      <workItem from="1479940239641" duration="17215000" />
+      <workItem from="1479940239641" duration="18636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25970000" />
+    <option name="totallyTimeSpent" value="27391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="974" extended-state="0" />
@@ -870,20 +873,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/permutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="35" />
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nestedArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="735">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#392#0" expanded="true" />
           </folding>
         </state>
       </provider>

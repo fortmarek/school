@@ -2,34 +2,51 @@
  * Created by marekfort on 24/11/2016.
  */
 
+import java.util.*;
 import static java.lang.System.out;
 
 public class nestedArray {
     public static void main(String[] args) {
         int[][] nested = new int[][] {{1,2},{3,4},{5,6}};
 
-        int rowIndex = 0;
+        getTable(2, nested);
+    }
 
-        String row = "";
+    private static List<String> getTable(int height, int[][] nested) {
+        List<String> rows = new ArrayList<String>();
+        rows.add("");
+
+        int rowIndex = 0;
 
         for (int[] nest : nested) {
             for (int number : nest) {
-
-                if (rowIndex == 0) {
+                String row = rows.get(rowIndex);
+                if (row.length() == 0) {
                     row += String.format("%s", number);
                 }
                 else {
                     row += ", " + number;
                 }
-                if (rowIndex == 2) {
+
+                rows.set(rowIndex, row);
+
+                if (rowIndex == 0 && rows.size() < height) {
+                    rows.add("");
+                }
+
+                if (rowIndex == height - 1) {
                     rowIndex = 0;
-                    out.println(row);
-                    row = "";
                     continue;
                 }
 
                 rowIndex++;
             }
         }
+
+        for (String row : rows) {
+            out.println(row);
+        }
+
+        return rows;
     }
 }
