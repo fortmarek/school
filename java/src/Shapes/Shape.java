@@ -25,7 +25,7 @@ public abstract class Shape {
     public static void main(String[] args) {
         Boolean cont = true;
 
-        while (cont == true) {
+        while (cont) {
             out.println("SHAPES");
 
             Scanner scanner = new Scanner(System.in);
