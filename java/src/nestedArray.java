@@ -20,9 +20,7 @@ public class nestedArray {
 
         for (int[] nest : nested) {
             for (int number : nest) {
-
-
-
+                
                 String row = rows.get(index);
 
                 if (row.length() == 0) {
@@ -45,18 +43,13 @@ public class nestedArray {
                     index++;
                 }
 
+                if (downwards) {
 
-
-                if (index == height - 1) {
-
-                    if (downwards) {
+                    if (index == height - 1) {
                         index = 0;
                         continue;
                     }
 
-                }
-
-                if (downwards) {
                     index++;
                 }
 
