@@ -26,7 +26,7 @@ public abstract class Shape {
         Boolean cont = true;
 
         while (cont) {
-            out.println("SHAPES");
+            out.println("0: Ukončit program\n1: Čtverec\n2: Obdélník\n3: Trojúhelník\n4: Kružnice\n5: Celkvoý součet obsahů\n6: Seřazené obsahy");
 
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
