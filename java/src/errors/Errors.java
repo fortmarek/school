@@ -7,10 +7,17 @@ import java.util.*;
 
 public class Errors {
     public static void main(String args[]) {
-        runError();
+        createTriangle();
     }
 
-    private static void runError() {
+    private static void createTriangle() {
+
+        Scanner sc = new Scanner(System.in);
+        int a = getSide("a");
+        int b = getSide("b");
+        int c = getSide("c");
+
+        /*
         String hmotnost;
         Scanner sc = new Scanner(System.in);
         System.out.println("Zadej hmotnost: ");
@@ -30,5 +37,19 @@ public class Errors {
         catch (NullPointerException e) {
 
         }
+        */
+    }
+
+    private static int getSide(String sideName) {
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println(String.format("Zadejte stranu %s: ", sideName));
+            return sc.nextInt();
+        }
+        catch(InputMismatchException e) {
+            System.err.println("Pouze čísla");
+            getSide(sideName);
+        }
+        return 0;
     }
 }
