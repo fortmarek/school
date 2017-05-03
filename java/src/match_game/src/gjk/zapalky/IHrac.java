@@ -19,7 +19,7 @@ public interface IHrac extends gjk.zapalky.IHrac {
 
     public String Jmeno(); //Vraci vase jmeno
     public void Inicializace(int N); //nastavi hraci pole. N = pocet ctvercu v jednom radku / sloupci
-    public void TahProtihrace(Point souradnice) throws Exception; //Tahne protihrac. Hodi vyjimku, pokud se protihrac pokousi provest neplatny tah - tedy polozit zapalku mimo hraci plochu nebo na obsazene misto
+    public void TahProtpihrace(Point souradnice) throws Exception; //Tahne protihrac. Hodi vyjimku, pokud se protihrac pokousi provest neplatny tah - tedy polozit zapalku mimo hraci plochu nebo na obsazene misto
     public Point MujTah(); //Provede tah a vrati jeho souradnici
 }
 

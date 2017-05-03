@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Zapalky (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/match_game/src/gjk/zapalky/Zapalky.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
