@@ -7,44 +7,53 @@ import java.util.*;
 
 public class Errors {
     public static void main(String args[]) {
-        createTriangle();
+        checkTriangle();
     }
-
-    private static void createTriangle() {
+    private static void checkTriangle() {
 
         Scanner sc = new Scanner(System.in);
-        int a = getSide("a");
-        int b = getSide("b");
-        int c = getSide("c");
-
-        /*
-        String hmotnost;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Zadej hmotnost: ");
-
-        hmotnost = sc.nextLine();
-        String jmeno = null;
+        double a = getSide("a");
+        double b = getSide("b");
+        double c = getSide("c");
 
         try {
-            int m = Integer.parseInt(hmotnost);
-            System.out.println("Hmotnost je " + m + " kg");
-            //System.out.println(jmeno.toUpperCase());
+            if (!isTriangle(a, b, c)) {
+                throw new TriangleError();
+            }
         }
-        catch (NumberFormatException e) {
-            System.err.println("Chybné zadání");
-            runError();
+        catch (TriangleError e) {
+            System.err.println("Není trojúhelník");
+            checkTriangle();
         }
-        catch (NullPointerException e) {
 
+        try {
+            if (isPerpendicular(a, b, c)) {
+                System.out.println("Trojúhelník je pravoúhlý");
+            }
+            else {
+                throw new PerpendicularError();
+            }
         }
-        */
+
+        catch (PerpendicularError e) {
+            System.err.println("Trojúhelník není pravoúhlý");
+            checkTriangle();
+        }
     }
 
-    private static int getSide(String sideName) {
+    private static boolean isTriangle(double a, double b, double c) {
+        return (a + b > c && a + c > b && b + c > a);
+    }
+
+    private static boolean isPerpendicular(double a, double b, double c) {
+        return (Math.sqrt(a*a + b*b) == Math.sqrt(c*c) || Math.sqrt(a*a + c*c) == Math.sqrt(b*b) || Math.sqrt(c*c + b*b) == Math.sqrt(a*a));
+    }
+
+    private static double getSide(String sideName) {
         try {
             Scanner sc = new Scanner(System.in);
             System.out.println(String.format("Zadejte stranu %s: ", sideName));
-            return sc.nextInt();
+            return sc.nextDouble();
         }
         catch(InputMismatchException e) {
             System.err.println("Pouze čísla");
