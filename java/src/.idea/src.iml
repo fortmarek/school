@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/match_game/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/streams" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/errors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dames" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/RecursiveDir" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
