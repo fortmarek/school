@@ -7,29 +7,36 @@ import java.util.Collections;
 
 public class RecursiveDir {
     public static void main(String args[]) {
-        File file = new File("/Users/marekfort/Development/school");
+        File file = new File("/Users/marekfort/Design");
         System.out.println(file.getAbsolutePath());
 
         getAllFolderChildren(file);
 
     }
 
-    private static int emptySpaceCounter = "";
-
     private static void getAllFolderChildren(File file) {
         try {
             File[] children = file.listFiles();
+
+            if (children != null) {
+                System.out.println("Obsah " + file.getAbsolutePath());
+            }
+
             assert children != null;
             for (File child: children) {
-                System.out.println("- " + emptySpace + child.getName());
-                emptySpace += " ";
+                System.out.println("- " + child.getName());
+            }
+            for (File child: children) {
                 getAllFolderChildren(child);
-                String.join("", Collections.nCopies(8, " "));
             }
         }
         catch (Exception e) {
-            emptySpace = "";
+
         }
 
+    }
+
+    private static String emptySpaces(int n) {
+        return String.join("", Collections.nCopies(n, " "));
     }
 }
