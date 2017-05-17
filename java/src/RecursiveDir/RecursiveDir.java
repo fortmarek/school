@@ -4,13 +4,26 @@
 
 import java.io.*;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class RecursiveDir {
     public static void main(String args[]) {
-        File file = new File("/Users/marekfort/Design");
-        System.out.println(file.getAbsolutePath());
+        
+        askForFile();
 
-        getAllFolderChildren(file);
+    }
+
+    private static void askForFile() {
+        System.out.println("Print all subs of this file: ");
+        Scanner sc = new Scanner(System.in);
+        File file = new File(sc.next());
+        if (file.exists()) {
+            getAllFolderChildren(file);
+        }
+        else {
+            System.out.println("File does not exist");
+            askForFile();
+        }
 
     }
 
