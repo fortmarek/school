@@ -14,11 +14,18 @@ class Fronta<T extends Polozka> {
         elements.add(element);
     }
     void remove(){
-        T e = elements.get(0);
-        e.printout();
-        elements.remove(0);
+        try {
+            T e = elements.get(0);
+            System.out.println("Removed:");
+            e.printout();
+            elements.remove(0);
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.err.println("Fronta je prázdná");
+        }
     }
     void printout(){
+        System.out.println("Fronta:");
         for(T e: elements){
             e.printout();
         }

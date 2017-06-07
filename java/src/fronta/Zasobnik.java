@@ -12,11 +12,19 @@ class Zasobnik<T extends Polozka> {
         elements.add(0, element);
 	}
 	void remove(){
-        T e = elements.get(elements.size() - 1);
-        e.printout();
-        elements.remove(elements.size() - 1);
+        try {
+            T e = elements.get(elements.size() - 1);
+            System.out.println("Removed:");
+            e.printout();
+            elements.remove(elements.size() - 1);
+        }
+        catch (IndexOutOfBoundsException e) {
+            System.err.println("Zásobník je prázdný");
+        }
+
 	}
 	void printout(){
+        System.out.println("Zásobník:");
         for(T e: elements){
             e.printout();
         }
