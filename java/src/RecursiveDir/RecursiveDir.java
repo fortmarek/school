@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class RecursiveDir {
     public static void main(String args[]) {
-        
+
         askForFile();
 
     }
